@@ -1,11 +1,9 @@
 import json
 from pprint import pprint
 import subprocess
-import zipfile
 import os
 import os.path
 import csv
-import mysql.connector
 import shutil
 
 import csv
