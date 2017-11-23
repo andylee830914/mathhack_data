@@ -34,6 +34,7 @@ python txt_parse.py purpose [--update]
 ### summary_parse.py
 summary of register's data
 ```
+python summary_parse.py profile
 python summary_parse.py gender
 python summary_parse.py school
 ```
