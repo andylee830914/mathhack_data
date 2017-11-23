@@ -10,7 +10,7 @@ Mathhack Registration Data Parser
 
 ## Command Line Tools
 ### reg_pdf_generate.py
-originaze original uploaded PDF file to `full` folder ,named by reg id and name
+originaze original uploaded PDF file to `full` folder, named by reg id and name
 ```
 python reg_pdf_generate.py [file]
 ```
