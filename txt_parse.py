@@ -5,7 +5,7 @@
 ##########
 import os
 import sys
-foldername = "reg_data_pdf"
+foldername = "reg_data"
 full_folder = foldername + '/txt/'
 file = os.listdir(full_folder)
 if len(sys.argv) < 2:

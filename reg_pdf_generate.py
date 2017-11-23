@@ -8,7 +8,7 @@ import csv
 import shutil
 import csv
 
-foldername = "reg_data_pdf"
+foldername = "reg_data"
 
 if len(sys.argv) < 2:
     print('no argument')

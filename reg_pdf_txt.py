@@ -7,7 +7,7 @@ import csv
 import shutil
 
 import csv
-foldername = "reg_data_pdf"
+foldername = "reg_data"
 
 
 full_folder = foldername + '/full/'
