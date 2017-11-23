@@ -7,7 +7,16 @@ if len(sys.argv) < 2:
     print('no argument')
     sys.exit()
 
+
 if sys.argv[1] == 'profile' :
+    try:
+        if sys.argv[2].startswith('--'):
+            option = sys.argv[2][2:]
+            if option == 'update':
+                txt_file = os.listdir(foldername + '/profile/')
+                file = list(set(file) - set(txt_file))
+    except:
+        pass
     if not os.path.exists(foldername + '/profile/'):
         os.makedirs(foldername + '/profile/')
     klist = ['報','隊名', '姓名', '組員', '性別', '電話', '學校',
@@ -27,7 +36,7 @@ if sys.argv[1] == 'profile' :
                 for line in file:
                     if '報名表' in line:
                         i=1
-                    if '目的' in line:
+                    if '目的' in line or '⽬的' in line:
                         i=0
                     if '男' in line:
                         men = men + 1
@@ -40,6 +49,14 @@ if sys.argv[1] == 'profile' :
         except:
             print('skip')
 elif sys.argv[1] == 'purpose' :
+    try:
+        if sys.argv[2].startswith('--'):
+            option = sys.argv[2][2:]
+            if option == 'update':
+                txt_file = os.listdir(foldername + '/purpose/')
+                file = list(set(file) - set(txt_file))
+    except:
+        pass
     if not os.path.exists(foldername + '/purpose/'):
         os.makedirs(foldername + '/purpose/')
     klist = ['無則免', '若組員有', '請簡述報名']

@@ -45,6 +45,12 @@ def school_same(line):
         line = '瀛海中學'
     if line == '中山女中':
         line = '中山女高'
+    if line == '美和中學':
+        line = '美和高中'
+    if line == '台南第一高級中學':
+        line = '台南一中'
+    if line == '台中市立中港高級中學':
+        line = '中港高中'
     return line
 
 
@@ -60,7 +66,7 @@ for fn in file:
                 line = line.strip('\n')
                 line = line.replace('國立', '')
                 line = line.replace('私立', '')
-                if len(line) >= 4 and any(word in line for word in sk) and all(word not in line for word in nsk):
+                if len(line) >= 4 and len(line) <= 15 and any(word in line for word in sk) and all(word not in line for word in nsk):
                     line = school_same(line)
                     if line in high :
                         high[line].total = high[line].total + 1

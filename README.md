@@ -29,7 +29,7 @@ python txt_parse.py personal
 python txt_parse.py purpose
 ```
 > some file need manual modified : 
-> 4 5 21 41 48
+> 4 5 12 16 21 38 41 48
 
 ### school_parse.py
 summary of register's school data
