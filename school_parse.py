@@ -4,7 +4,7 @@ import csv
 from pprint import pprint
 foldername = "reg_data"
 full_folder = foldername + '/profile/'
-file = os.listdir(full_folder)
+file = sorted(os.listdir(full_folder))
 high = {}
 
 class School:
