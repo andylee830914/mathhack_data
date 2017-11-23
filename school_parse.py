@@ -47,6 +47,9 @@ def school_same(line):
         line = '中山女高'
     return line
 
+
+sk = ['高','中','工']
+nsk = ['慈中', '隊']
 for fn in file:
     print(fn)
     reg_id = fn.split()[0]
@@ -57,7 +60,7 @@ for fn in file:
                 line = line.strip('\n')
                 line = line.replace('國立', '')
                 line = line.replace('私立', '')
-                if len(line) >= 4 and ('高' in line or '中' in line or '工' in line) and ('慈中' not in line and '隊' not in line):
+                if len(line) >= 4 and any(word in line for word in sk) and all(word not in line for word in nsk):
                     line = school_same(line)
                     if line in high :
                         high[line].total = high[line].total + 1
