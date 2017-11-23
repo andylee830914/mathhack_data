@@ -23,7 +23,8 @@ if sys.argv[1] == 'profile' :
             '年級', '備註', '無', 'E-mail', '聯絡人', '基本資料', '報名目的', '若有',
             '1.','2.','3.','4.','5.',
             '所以','主題']
-    glist = ['1\n', '2\n', '3\n', '10\n', '11\n', '12\n', '\n', '12(高三)\n']
+    glist = ['1\n', '2\n', '3\n', '10\n',
+             '11\n', '12\n', "\n", "\x0c\n", '\xa0\n', '12(高三)\n']
     wlist = ['女中', '女高', '女貌']
     for fn in file:
         print(fn)
@@ -42,8 +43,9 @@ if sys.argv[1] == 'profile' :
                         men = men + 1
                     if '女' in line and all(word not in line for word in wlist):
                         women = women + 1
-                    if i == 1 and all(word not in line for word in klist) and all(word != line for word in glist):
+                    if i == 1 and line[0]!= '\n' and all(word not in line for word in klist) and all(word != line for word in glist):
                         f.write(line)
+                        # print(repr(line))
                 f.write('男:'+str(men)+' 女:'+ str(women))
                 f.close()
         except:
@@ -68,11 +70,14 @@ elif sys.argv[1] == 'purpose' :
                 f = open(foldername + '/purpose/' + fn, 'w')
 
                 for line in file:
+                    line = line.replace('學校\n', '學校').replace(
+                        "\x0c", '').replace('\xa0', '').replace('\u200b\u200b\n','')
                     if '目的' in line or '⽬的' in line: #這兩個目的不一樣啊幹
                         i = 1
                     if '在學證明' in line:
                         i = 0
-                    if i == 1 and all(word not in line for word in klist) :
+                    if i == 1 and line != '\n' and all(word not in line for word in klist):
+                        print(repr(line))
                         f.write(line)
                 f.close()
         except:
