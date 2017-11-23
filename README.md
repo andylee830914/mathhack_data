@@ -25,7 +25,7 @@ python reg_pdf_txt.py [--update]
 ### txt_parse.py
 parse personal data and purpose data from files in `txt`
 ```
-python txt_parse.py personal [--update]
+python txt_parse.py profile [--update]
 python txt_parse.py purpose [--update]
 ```
 > some file need manual modified : 

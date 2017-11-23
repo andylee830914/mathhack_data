@@ -4,7 +4,8 @@ foldername = "reg_data"
 full_folder = foldername + '/txt/'
 file = os.listdir(full_folder)
 if len(sys.argv) < 2:
-    print('no argument')
+    print(
+        'usage: python txt_parse.py [ profile | purpose ] [ --update ]')
     sys.exit()
 
 
