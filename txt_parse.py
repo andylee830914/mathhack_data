@@ -1,5 +1,6 @@
 ##########
 # need manual modified
+# 4 5
 # 21 41 48
 ##########
 import os
@@ -12,11 +13,13 @@ if len(sys.argv) < 2:
     sys.exit()
 
 if sys.argv[1] == 'profile' :
+    if not os.path.exists(foldername + '/profile/'):
+        os.makedirs(foldername + '/profile/')
     klist = ['報','隊名', '姓名', '組員', '性別', '電話', '學校',
             '年級', '備註', '無', 'E-mail', '聯絡人', '基本資料', '報名目的', '若有',
             '1.','2.','3.','4.','5.',
             '所以','主題']
-    glist = ['1\n', '2\n', '3\n', '10\n', '11\n', '12\n', '\n']
+    glist = ['1\n', '2\n', '3\n', '10\n', '11\n', '12\n', '\n', '12(高三)\n']
     wlist = ['女中', '女高', '女貌']
     for fn in file:
         print(fn)
@@ -42,6 +45,8 @@ if sys.argv[1] == 'profile' :
         except:
             print('skip')
 elif sys.argv[1] == 'purpose' :
+    if not os.path.exists(foldername + '/purpose/'):
+        os.makedirs(foldername + '/purpose/')
     klist = ['無則免', '若組員有', '請簡述報名']
     for fn in file:
         print(fn)

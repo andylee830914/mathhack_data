@@ -12,6 +12,8 @@ foldername = "reg_data_pdf"
 
 full_folder = foldername + '/full/'
 file = os.listdir(full_folder)
+if not os.path.exists(foldername + '/txt/'):
+    os.makedirs(foldername + '/txt/')
 for fn in file:
     print(fn)
     try:
