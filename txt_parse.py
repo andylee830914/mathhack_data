@@ -1,8 +1,3 @@
-##########
-# need manual modified
-# 4 5
-# 21 41 48
-##########
 import os
 import sys
 foldername = "reg_data"
