@@ -16,6 +16,8 @@ python reg_pdf_generate.py <registraion csv>
 ```
 
 ### reg_pdf_txt.py
+parse pdf with [pdfminer/pdfminer.six](https://github.com/pdfminer/pdfminer.six)
+
 parse all PDFs which under `full` folder to `txt`
 ```
 python reg_pdf_txt.py
