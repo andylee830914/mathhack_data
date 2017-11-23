@@ -7,6 +7,11 @@ full_folder = foldername + '/profile/'
 file = sorted(os.listdir(full_folder))
 high = {}
 
+if len(sys.argv) < 2:
+    print(
+        'usage: python summary_parse.py [ profile | gender | school ]')
+    sys.exit()
+
 class School:
     def __repr__(self):
         from pprint import pformat
