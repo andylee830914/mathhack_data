@@ -36,6 +36,5 @@ summary of register's data
 ```
 python summary_parse.py gender
 python summary_parse.py school
-
 ```
 
