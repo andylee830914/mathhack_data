@@ -16,7 +16,8 @@ for fn in file:
         print(fn)
         csvname = fn.replace('txt', 'csv')
         with open(foldername + '/purpose/' + fn, 'r') as file:
-            data = file.read().replace('研究經驗及心得','').replace('報名目的','').replace('\n','')
+            data = file.read().replace('研究經驗及心得', '').replace('報名目的', '').replace(
+                '\n', '').replace('若組員有撰寫小論文或是參加科展等活動的經驗，請簡述活動經驗及其心得（無則免）。','')
             seg_list = jieba.analyse.textrank(data, topK=30, withWeight=True)
             with open(foldername + '/textrank/' + csvname, 'w', newline='') as csvfile:
                 csv_out = csv.writer(csvfile)
