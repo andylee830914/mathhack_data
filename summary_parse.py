@@ -56,6 +56,10 @@ def school_same(line):
         line = '台南一中'
     if line == '台中市立中港高級中學':
         line = '中港高中'
+    if line == '高雄市前鎮高級中學':
+        line = '前鎮高中'
+    if line == '復興實驗高中':
+        line = '復興實中'
     return line
 
 
