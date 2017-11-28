@@ -39,3 +39,19 @@ python summary_parse.py gender
 python summary_parse.py school
 ```
 
+### textrank.py
+textrank of each register's purpose
+```
+python textrank.py
+```
+
+### csv2json.py
+> modified from [maur1th/csv2json-fixture](https://github.com/maur1th/csv2json-fixture)
+> 
+generate Django model's fixtures
+* default setting : auto increment for primary key
+* `--pk` option : use first column as primary key
+
+```
+python csv2json.py file.csv app.Model [--pk]
+```
