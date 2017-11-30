@@ -26,7 +26,7 @@ if sys.argv[1] == 'profile' :
             '所以','主題']
     glist = ['1\n', '2\n', '3\n', '10\n',
              '11\n', '12\n', "\n", "\x0c\n", '\xa0\n', '12(高三)\n']
-    wlist = ['女中', '女高', '女貌']
+    wlist = ['女中', '女高', '女貌', '女子', '女超人']
     for fn in file:
         print(fn)
         i = 0
